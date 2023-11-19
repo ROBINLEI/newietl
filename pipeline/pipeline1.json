@@ -105,7 +105,10 @@
 				"inputs": [
 					{
 						"referenceName": "AzureSqlTable1_DY",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"TableName": "DimAccount"
+						}
 					}
 				],
 				"outputs": [
