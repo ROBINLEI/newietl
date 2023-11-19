@@ -1,0 +1,12 @@
+{
+	"name": "AzureSqlDatabase1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=aiadbserver001.database.windows.net;initial catalog=aiadb001;user id=leiguohai",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDE5N0VGODBFLTdGNUQtNEE4QS1BMjhDLTE5OTE3QUE2ODNEMF83M2JiZWUxYy0xYTY5LTQ4YTItODk3MS04OWE3ODUwYzM3NzgiDQp9"
+		}
+	}
+}
