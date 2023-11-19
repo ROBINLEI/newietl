@@ -1,0 +1,22 @@
+{
+	"name": "DelimitedText2_output",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage2_KV",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "ietlsl"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

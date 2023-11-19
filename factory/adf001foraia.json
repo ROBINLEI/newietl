@@ -1,0 +1,9 @@
+{
+	"name": "adf001foraia",
+	"location": "eastasia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "fff2d2cf-1b22-4dfb-a54a-72d3d5c7be74",
+		"tenantId": "60f15d90-cc68-49af-90e7-4d67aba3ebae"
+	}
+}
