@@ -94,20 +94,6 @@
 									"type": "Int32",
 									"physicalType": "int"
 								}
-							},
-							{
-								"source": {
-									"name": " \"Age\"",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "Age",
-									"type": "Decimal",
-									"physicalType": "decimal",
-									"scale": 2,
-									"precision": 10
-								}
 							}
 						],
 						"typeConversion": true,
