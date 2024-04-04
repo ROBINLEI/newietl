@@ -26,11 +26,6 @@
 							"type": "DelimitedTextReadSettings"
 						}
 					},
-					"sink": {
-						"type": "AzureSqlSink",
-						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
-					},
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
@@ -38,83 +33,64 @@
 							{
 								"source": {
 									"name": "Name",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Name",
-									"type": "String",
-									"physicalType": "nvarchar"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": " \"Team\"",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Team",
-									"type": "String",
-									"physicalType": "nvarchar"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": " \"Position\"",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Position",
-									"type": "String",
-									"physicalType": "nvarchar"
+									"type": "String"
 								}
 							},
 							{
 								"source": {
 									"name": " \"Height(inches)\"",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Height(inches)",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "Int32"
 								}
 							},
 							{
 								"source": {
 									"name": " \"Weight(lbs)\"",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Weight(lbs)",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "Int32"
 								}
 							},
 							{
 								"source": {
 									"name": " \"Age\"",
-									"type": "String",
-									"physicalType": "String"
+									"type": "String"
 								},
 								"sink": {
 									"name": "Age",
-									"type": "Decimal",
-									"physicalType": "decimal",
-									"scale": 2,
-									"precision": 10
+									"type": "Decimal"
 								}
 							}
-						],
-						"typeConversion": true,
-						"typeConversionSettings": {
-							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
-						}
+						]
 					}
 				},
 				"inputs": [
@@ -124,12 +100,6 @@
 						"parameters": {
 							"filename": "sample2.csv"
 						}
-					}
-				],
-				"outputs": [
-					{
-						"referenceName": "AST_002",
-						"type": "DatasetReference"
 					}
 				]
 			}
