@@ -5,12 +5,6 @@
 			"referenceName": "abs_aia_links",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"filename": {
-				"type": "String",
-				"defaultValue": "sample1.csv"
-			}
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
@@ -26,55 +20,27 @@
 		},
 		"schema": [
 			{
-				"name": "Month",
+				"name": "Name",
 				"type": "String"
 			},
 			{
-				"name": " \"Average\"",
+				"name": " \"Team\"",
 				"type": "String"
 			},
 			{
-				"name": " \"2005\"",
+				"name": " \"Position\"",
 				"type": "String"
 			},
 			{
-				"name": " \"2006\"",
+				"name": " \"Height(inches)\"",
 				"type": "String"
 			},
 			{
-				"name": " \"2007\"",
+				"name": " \"Weight(lbs)\"",
 				"type": "String"
 			},
 			{
-				"name": " \"2008\"",
-				"type": "String"
-			},
-			{
-				"name": " \"2009\"",
-				"type": "String"
-			},
-			{
-				"name": " \"2010\"",
-				"type": "String"
-			},
-			{
-				"name": " \"2011\"",
-				"type": "String"
-			},
-			{
-				"name": " \"2012\"",
-				"type": "String"
-			},
-			{
-				"name": " \"2013\"",
-				"type": "String"
-			},
-			{
-				"name": " \"2014\"",
-				"type": "String"
-			},
-			{
-				"name": " \"2015\"",
+				"name": " \"Age\"",
 				"type": "String"
 			}
 		]
