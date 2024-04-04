@@ -1,0 +1,45 @@
+{
+	"name": "AST_002",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Team",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Position",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Height(inches)",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Weight(lbs)",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Age",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 2
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "t002"
+		}
+	}
+}
