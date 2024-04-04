@@ -3,8 +3,8 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
-				"type": "Copy",
+				"name": "Data flow1",
+				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -15,93 +15,16 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"source": {
-						"type": "DelimitedTextSource",
-						"storeSettings": {
-							"type": "AzureBlobStorageReadSettings",
-							"recursive": true,
-							"enablePartitionDiscovery": false
-						},
-						"formatSettings": {
-							"type": "DelimitedTextReadSettings"
-						}
+					"dataflow": {
+						"referenceName": "dataflow1",
+						"type": "DataFlowReference"
 					},
-					"enableStaging": false,
-					"translator": {
-						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "Name",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Name",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": " \"Team\"",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Team",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": " \"Position\"",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Position",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": " \"Height(inches)\"",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Height(inches)",
-									"type": "Int32"
-								}
-							},
-							{
-								"source": {
-									"name": " \"Weight(lbs)\"",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Weight(lbs)",
-									"type": "Int32"
-								}
-							},
-							{
-								"source": {
-									"name": " \"Age\"",
-									"type": "String"
-								},
-								"sink": {
-									"name": "Age",
-									"type": "Decimal"
-								}
-							}
-						]
-					}
-				},
-				"inputs": [
-					{
-						"referenceName": "DT_FILENAME",
-						"type": "DatasetReference",
-						"parameters": {
-							"filename": "sample2.csv"
-						}
-					}
-				]
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
 			}
 		],
 		"annotations": []
