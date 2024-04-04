@@ -57,7 +57,15 @@
 				"     format: 'table',",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     errorHandlingOption: 'stopOnFirstError') ~> sink1"
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          Name,",
+				"          Team = { \"Team\"},",
+				"          Position = { \"Position\"},",
+				"          {Height(inches)} = { \"Height(inches)\"},",
+				"          {Weight(lbs)} = { \"Weight(lbs)\"},",
+				"          Age = { \"Age\"}",
+				"     )) ~> sink1"
 			]
 		}
 	}
