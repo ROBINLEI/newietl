@@ -1,0 +1,17 @@
+{
+	"name": "Binary_output",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "abs_aia_links",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "sampledate"
+			}
+		}
+	}
+}
