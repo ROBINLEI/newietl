@@ -1,0 +1,21 @@
+{
+	"name": "Binary_zip",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "abs_aia_links",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "azure-data-factory-by-example-main.zip",
+				"container": "fd001"
+			},
+			"compression": {
+				"type": "ZipDeflate"
+			}
+		}
+	}
+}
