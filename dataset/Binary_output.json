@@ -10,9 +10,11 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "*",
 				"folderPath": "output",
 				"container": "sampledate"
+			},
+			"compression": {
+				"type": "ZipDeflate"
 			}
 		}
 	}
