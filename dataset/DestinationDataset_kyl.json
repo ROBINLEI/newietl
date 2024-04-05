@@ -1,0 +1,19 @@
+{
+	"name": "DestinationDataset_kyl",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "abs_aia_links",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "*.*",
+				"folderPath": "output",
+				"container": "sampledate"
+			}
+		}
+	}
+}
