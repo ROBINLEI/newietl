@@ -25,9 +25,15 @@
 				],
 				"typeProperties": {
 					"source": {
-						"type": "AzureSqlSource",
-						"queryTimeout": "02:00:00",
-						"partitionOption": "None"
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
 					},
 					"sink": {
 						"type": "DelimitedTextSink",
@@ -52,8 +58,11 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "AST_001",
-						"type": "DatasetReference"
+						"referenceName": "DT_FILENAME",
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": "sample1.csv"
+						}
 					}
 				],
 				"outputs": [
