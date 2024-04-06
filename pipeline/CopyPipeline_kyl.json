@@ -28,11 +28,13 @@
 						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
-							"recursive": true,
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
-							"type": "DelimitedTextReadSettings"
+							"type": "DelimitedTextReadSettings",
+							"compressionProperties": {
+								"type": "ZipDeflateReadSettings"
+							}
 						}
 					},
 					"sink": {
@@ -59,11 +61,8 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DT_FILENAME",
-						"type": "DatasetReference",
-						"parameters": {
-							"filename": "sample1.csv"
-						}
+						"referenceName": "DelimitedText2_zip",
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
