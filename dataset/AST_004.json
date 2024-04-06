@@ -1,0 +1,27 @@
+{
+	"name": "AST_004",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "game name",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "game length",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "t004"
+		}
+	}
+}

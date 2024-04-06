@@ -1,0 +1,72 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "DT_FILENAME02",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "AST_002",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "filter1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          Name as string,",
+				"          { \"Team\"} as string,",
+				"          { \"Position\"} as string,",
+				"          { \"Height(inches)\"} as string,",
+				"          { \"Weight(lbs)\"} as string,",
+				"          { \"Age\"} as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     limit: 100,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 filter(isFloat({ \"Weight(lbs)\"}) ) ~> filter1",
+				"filter1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          Name as string,",
+				"          Team as string,",
+				"          Position as string,",
+				"          {Height(inches)} as integer,",
+				"          {Weight(lbs)} as integer,",
+				"          Age as decimal(10,2)",
+				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          Name,",
+				"          Team = { \"Team\"},",
+				"          Position = { \"Position\"},",
+				"          {Height(inches)} = { \"Height(inches)\"},",
+				"          {Weight(lbs)} = { \"Weight(lbs)\"},",
+				"          Age = { \"Age\"}",
+				"     )) ~> sink1"
+			]
+		}
+	}
+}

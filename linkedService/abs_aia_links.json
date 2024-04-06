@@ -1,0 +1,11 @@
+{
+	"name": "abs_aia_links",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"serviceEndpoint": "https://aiast001.blob.core.windows.net/",
+			"accountKind": "StorageV2"
+		}
+	}
+}

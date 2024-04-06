@@ -1,8 +1,8 @@
 {
-	"name": "DelimitedText2_output",
+	"name": "dt_output",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorage2_KV",
+			"referenceName": "abs_aia_links",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -10,14 +10,15 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "newdata01.csv",
-				"container": "ietlsl"
+				"fileName": "1",
+				"folderPath": "output",
+				"container": "sampledate"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
+			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
 		"schema": []
-	},
-	"type": "Microsoft.DataFactory/factories/datasets"
+	}
 }
