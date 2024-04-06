@@ -32,10 +32,7 @@
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
-							"type": "DelimitedTextReadSettings",
-							"compressionProperties": {
-								"type": "ZipDeflateReadSettings"
-							}
+							"type": "DelimitedTextReadSettings"
 						}
 					},
 					"sink": {
@@ -62,8 +59,11 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DelimitedText2_zip",
-						"type": "DatasetReference"
+						"referenceName": "DT_FILENAME",
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": "sample1.csv"
+						}
 					}
 				],
 				"outputs": [
