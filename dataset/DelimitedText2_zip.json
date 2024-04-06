@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "CandyShack.zip",
+				"fileName": "azure-data-factory-by-example-main.zip",
 				"container": "fd001"
 			},
 			"columnDelimiter": ",",
