@@ -38,8 +38,7 @@
 					"sink": {
 						"type": "DelimitedTextSink",
 						"storeSettings": {
-							"type": "AzureBlobStorageWriteSettings",
-							"copyBehavior": "MergeFiles"
+							"type": "AzureBlobStorageWriteSettings"
 						},
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
@@ -68,7 +67,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DT_FILENAME02",
+						"referenceName": "dt_output",
 						"type": "DatasetReference"
 					}
 				]
