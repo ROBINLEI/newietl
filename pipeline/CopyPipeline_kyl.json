@@ -68,7 +68,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText2_output",
+						"referenceName": "DT_FILENAME02",
 						"type": "DatasetReference"
 					}
 				]
