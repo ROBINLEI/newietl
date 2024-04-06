@@ -1,0 +1,36 @@
+{
+	"name": "DelimitedText2_zip",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "abs_aia_links",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "CandyShack.zip",
+				"container": "fd001"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "PK\u0003\u0004\u0014\u0000\u0000\u0000\u0000\u0000\u0014��X\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u000b\u0000\u0000\u0000CandyShack/PK\u0003\u0004\u0014\u0000\u0000\u0000\b\u0000\u0014��X«\u0017o�\u0007\u0000\u0000�\u001d\u0000\u0000\u0016\u0000\u0000\u0000CandyShack/2020-04.csvuYɮ�@\u0010��\u0015�;\u001bk�g��\u000b�E�p3`��\u0010�",
+				"type": "String"
+			},
+			{
+				"name": "@�z���\u0004\\#$@��}���b���հi_~��\u001d?\u000f����y�i׾�W��ɸ�}9��M��\u000f���r�}9�>ߺ�ۯ?\u001f��_�O_oZk�����8�.���M{#F�m�o\u001b����:�Z��\u0011xho\u001e��~14w�M#��E� �5m",
+				"type": "String"
+			},
+			{
+				"name": "���?��%;Ǜ�e�JI\u0004�ڛG�O_�j\u0003-s�",
+				"type": "String"
+			}
+		]
+	}
+}
