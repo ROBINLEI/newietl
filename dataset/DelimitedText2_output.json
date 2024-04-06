@@ -2,7 +2,7 @@
 	"name": "DelimitedText2_output",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorage2_KV",
+			"referenceName": "abs_aia_links",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "newdata01.csv",
-				"container": "ietlsl"
+				"fileName": "a.txt",
+				"container": "staging"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
