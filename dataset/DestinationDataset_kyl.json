@@ -13,6 +13,9 @@
 				"fileName": "a.zip",
 				"folderPath": "output",
 				"container": "sampledate"
+			},
+			"compression": {
+				"type": "ZipDeflate"
 			}
 		}
 	}
