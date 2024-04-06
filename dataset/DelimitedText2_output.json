@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "a.txt",
-				"container": "staging"
+				"fileName": "output.txt",
+				"container": "fd001"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
