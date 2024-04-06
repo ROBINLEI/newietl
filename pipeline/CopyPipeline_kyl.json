@@ -8,7 +8,7 @@
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
-					"retry": 0,
+					"retry": 5,
 					"retryIntervalInSeconds": 30,
 					"secureOutput": false,
 					"secureInput": false
@@ -38,7 +38,8 @@
 					"sink": {
 						"type": "DelimitedTextSink",
 						"storeSettings": {
-							"type": "AzureBlobStorageWriteSettings"
+							"type": "AzureBlobStorageWriteSettings",
+							"maxConcurrentConnections": 1
 						},
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
@@ -58,11 +59,8 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DT_FILENAME",
-						"type": "DatasetReference",
-						"parameters": {
-							"filename": "sample1.csv"
-						}
+						"referenceName": "DelimitedText2_zip",
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
